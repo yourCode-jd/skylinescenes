@@ -45,7 +45,7 @@ export default async function Nav() {
                   {link.label}
                   {link.subMenu && (
                     <span className="ml-2 transition-transform duration-300 ">
-                      <Image src="/downArrow.svg" alt="down" width={12} height={12} />
+                      <Image src="/icons/downArrow.svg" alt="down" width={12} height={12} />
                     </span>
                   )}
                 </Link>
@@ -67,9 +67,9 @@ export default async function Nav() {
           </div>
 
           <div className="flex items-center gap-x-6 h-full">
-            <ul><li><Link href="#"><Image src="/Search.svg" alt="" width={24} height={24} /></Link></li></ul>
-            <ul><li><Link href="#"><Image src="/user.svg" alt="" width={24} height={24} /></Link></li></ul>
-            <ul><li><Link href="#"><Image src="/shopping-cart.svg" alt="" width={24} height={24} /></Link></li></ul>
+            <ul><li><Link href="#"><Image src="/icons/Search.svg" alt="" width={24} height={24} /></Link></li></ul>
+            <ul><li><Link href="#"><Image src="/icons/user.svg" alt="" width={24} height={24} /></Link></li></ul>
+            <ul><li><Link href="#"><Image src="/icons/shopping-cart.svg" alt="" width={24} height={24} /></Link></li></ul>
           </div>
         </nav>
       </header>
