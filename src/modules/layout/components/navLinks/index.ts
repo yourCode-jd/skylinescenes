@@ -11,6 +11,11 @@ export const navLinks = [
     href: "/",
     key: "Best Sellers",
     label: "Best Sellers",
+    subMenu: [
+      { id: 21, label: "Web Development", href: "#" },
+      { id: 22, label: "App Development", href: "#" },
+      { id: 23, label: "UI/UX Design", href: "#" },
+    ],
   },
   {
     id: "3",
