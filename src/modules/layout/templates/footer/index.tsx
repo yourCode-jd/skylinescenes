@@ -1,157 +1,117 @@
-import { listCategories } from "@lib/data/categories"
-import { listCollections } from "@lib/data/collections"
-import { Text, clx } from "@medusajs/ui"
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
-import MedusaCTA from "@modules/layout/components/medusa-cta"
+export default function Footer() {
+  const topCategories = [
+    "Best Sellers", "Albany, NY", "Amalfi Coast, IT", "Amsterdam, NL", "Anchorage, AK",
+    "Annapolis, MD", "Atlanta, GA", "Atlantic City, NJ", "Auckland, NZ", "Augusta, ME",
+    "Austin, TX", "Baltimore, MD", "Baton Rouge, LA", "Belgium", "Bern, CH",
+    "Biloxi, MS", "Birmingham, AL", "Birmingham, UK", "Boston, MA", "Brisbane, AU",
+    "Buffalo, NY", "Charleston, SC", "Charleston, WV", "Charlotte, NC", "Chicago, IL",
+    "Cincinnati, OH", "Cleveland, OH", "Columbia, SC", "Columbus, OH", "View More..."
+  ];
 
-export default async function Footer() {
-  const { collections } = await listCollections({
-    fields: "*products",
-  })
-  const productCategories = await listCategories()
+  const quickLinks = ["Best Seller", "Shop", "Our Blogs", "Services", "About Us", "Contact Us"];
+  const otherLinks = ["Order History", "Shipping Policy", "Return Policy", "Privacy Policy", "Terms & Conditions", "FAQ"];
+
+  const socialLinks = [
+    {
+      name: "Facebook",
+      href: "#",
+      src: "/icons/facebook.svg",
+    },
+    {
+      name: "Twitter",
+      href: "#",
+      src: "/icons/twitter.svg",
+    },
+    {
+      name: "Instagram",
+      href: "#",
+      src: "/icons/instagram.svg",
+    },
+
+    {
+      name: "Youtube",
+      href: "#",
+      src: "/icons/youtube.svg",
+    },
+
+    {
+      name: "Twitter",
+      href: "#",
+      src: "/icons/pinterest.svg",
+    },
+
+  ];
+
 
   return (
-    <footer className="border-t border-ui-border-base w-full">
-      <div className="content-container flex flex-col w-full">
-        <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-40">
-          <div>
-            <LocalizedClientLink
-              href="/"
-              className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
-            >
-              Medusa Store
-            </LocalizedClientLink>
-          </div>
-          <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">
-            {productCategories && productCategories?.length > 0 && (
-              <div className="flex flex-col gap-y-2">
-                <span className="txt-small-plus txt-ui-fg-base">
-                  Categories
-                </span>
-                <ul
-                  className="grid grid-cols-1 gap-2"
-                  data-testid="footer-categories"
-                >
-                  {productCategories?.slice(0, 6).map((c) => {
-                    if (c.parent_category) {
-                      return
-                    }
+    <footer className="bg-[#343636] text-gray-300">
+      <div className="content-container py-20">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
 
-                    const children =
-                      c.category_children?.map((child) => ({
-                        name: child.name,
-                        handle: child.handle,
-                        id: child.id,
-                      })) || null
-
-                    return (
-                      <li
-                        className="flex flex-col gap-2 text-ui-fg-subtle txt-small"
-                        key={c.id}
-                      >
-                        <LocalizedClientLink
-                          className={clx(
-                            "hover:text-ui-fg-base",
-                            children && "txt-small-plus"
-                          )}
-                          href={`/categories/${c.handle}`}
-                          data-testid="category-link"
-                        >
-                          {c.name}
-                        </LocalizedClientLink>
-                        {children && (
-                          <ul className="grid grid-cols-1 ml-3 gap-2">
-                            {children &&
-                              children.map((child) => (
-                                <li key={child.id}>
-                                  <LocalizedClientLink
-                                    className="hover:text-ui-fg-base"
-                                    href={`/categories/${child.handle}`}
-                                    data-testid="category-link"
-                                  >
-                                    {child.name}
-                                  </LocalizedClientLink>
-                                </li>
-                              ))}
-                          </ul>
-                        )}
-                      </li>
-                    )
-                  })}
-                </ul>
-              </div>
-            )}
-            {collections && collections.length > 0 && (
-              <div className="flex flex-col gap-y-2">
-                <span className="txt-small-plus txt-ui-fg-base">
-                  Collections
-                </span>
-                <ul
-                  className={clx(
-                    "grid grid-cols-1 gap-2 text-ui-fg-subtle txt-small",
-                    {
-                      "grid-cols-2": (collections?.length || 0) > 3,
-                    }
-                  )}
+          <div className="md:col-span-8">
+            <h4 className="text-white font-semibold text-[26px] mb-7">Top Categories</h4>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+              {topCategories.map((item, index) => (
+                <Link
+                  key={index}
+                  href="#"
+                  className={`hover:text-white text-base font-normal ${item === "View More..." ? "text-white" : "text-[#B1B7C7]"
+                    }`}
                 >
-                  {collections?.slice(0, 6).map((c) => (
-                    <li key={c.id}>
-                      <LocalizedClientLink
-                        className="hover:text-ui-fg-base"
-                        href={`/collections/${c.handle}`}
-                      >
-                        {c.title}
-                      </LocalizedClientLink>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-            <div className="flex flex-col gap-y-2">
-              <span className="txt-small-plus txt-ui-fg-base">Medusa</span>
-              <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
-                <li>
-                  <a
-                    href="https://github.com/medusajs"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base"
-                  >
-                    GitHub
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://docs.medusajs.com"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base"
-                  >
-                    Documentation
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/medusajs/nextjs-starter-medusa"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base"
-                  >
-                    Source code
-                  </a>
-                </li>
-              </ul>
+                  {item}
+                </Link>
+              ))}
             </div>
           </div>
+
+          <div className="md:col-span-2">
+            <h4 className="text-white font-semibold text-[26px] mb-7">Quick Links</h4>
+            <ul className="space-y-4">
+              {quickLinks.map((item, index) => (
+                <li key={index}>
+                  <Link href="#" className="hover:text-white text-base font-normal text-[#B1B7C7]">{item}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="md:col-span-2">
+            <h4 className="text-white font-semibold text-[26px] mb-7">Other Links</h4>
+            <ul className="space-y-4">
+              {otherLinks.map((item, index) => (
+                <li key={index}>
+                  <Link href="#" className="hover:text-white text-base font-normal text-[#B1B7C7]">{item}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-        <div className="flex w-full mb-16 justify-between text-ui-fg-muted">
-          <Text className="txt-compact-small">
-            © {new Date().getFullYear()} Medusa Store. All rights reserved.
-          </Text>
-          <MedusaCTA />
+
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-[#494C4C] py-4">
+        <div className="content-container flex flex-col md:flex-row items-center justify-between">
+          <p className="text-base font-normal text-[#B1B7C7] leading-tight">&copy; {new Date().getFullYear()} Skyline Scenes. All Rights Reserved.</p>
+          <div className="flex space-x-4 items-center">
+            {socialLinks.map((item, index) => (
+              <Link key={index} href={item.href} aria-label={item.name}>
+                <Image
+                  src={item.src}
+                  alt={item.name}
+                  width={20}
+                  height={20}
+                  className="hover:opacity-80 transition h-full object-cover w-full"
+                />
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }

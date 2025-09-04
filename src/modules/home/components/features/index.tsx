@@ -52,7 +52,7 @@ export default function Features() {
     ]
 
     return (
-        <div className='sectionSpace bg-[#EDF1F3]'>
+        <section className='sectionSpace bg-[#EDF1F3]'>
             <div className='content-container'>
                 <h2 className='mainHeading'>Featured Products</h2>
                 <p className='mainText max-w-2xl'>
@@ -83,6 +83,6 @@ export default function Features() {
                     View All Products
                 </button>
             </div>
-        </div >
+        </section >
     )
 }

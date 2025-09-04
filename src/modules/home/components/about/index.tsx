@@ -19,7 +19,7 @@ export default function About() {
     ]
 
     return (
-        <div className="sectionSpace bg-[#EDF1F3]">
+        <section className="sectionSpace bg-[#EDF1F3]">
             <div className="max-w-[1330px] mx-auto">
                 {aboutContent.map((item) => (
                     <div
@@ -56,6 +56,6 @@ export default function About() {
                     </div>
                 ))}
             </div>
-        </div>
+        </section>
     )
 }

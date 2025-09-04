@@ -54,7 +54,7 @@ export default function CanvasDisplay() {
     ]
 
     return (
-        <div className='sectionSpace bg-[#EDF1F3]'>
+        <section className='sectionSpace bg-[#EDF1F3]'>
             <div className='content-container'>
                 <h2 className='mainHeading'>Prints, Photography & More</h2>
                 <p className='mainText'>
@@ -97,6 +97,6 @@ export default function CanvasDisplay() {
                 </ul>
 
             </div>
-        </div>
+        </section>
     )
 }

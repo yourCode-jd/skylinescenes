@@ -33,7 +33,7 @@ const slides = [
 
 export default function Hero() {
   return (
-    <div className="h-[75vh] w-full relative">
+    <section className="h-[75vh] w-full relative">
       <Swiper
         modules={[Pagination, Autoplay]}
         pagination={{
@@ -64,7 +64,7 @@ export default function Hero() {
 
       {/* ✅ Keep pagination OUTSIDE Swiper */}
       <div className="custom-pagination absolute z-[60] flex justify-center items-center gap-3 "></div>
-    </div>
+    </section>
 
   );
 }

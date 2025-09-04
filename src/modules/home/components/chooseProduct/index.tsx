@@ -55,7 +55,7 @@ export default function ChooseProduct() {
     ]
 
     return (
-        <div className='sectionSpace '>
+        <section className='sectionSpace '>
             <div className='content-container'>
                 <h2 className='mainHeading'>Choose Your Perfect Finish</h2>
                 <p className='mainText max-w-2xl'>
@@ -84,6 +84,6 @@ export default function ChooseProduct() {
                     ))}
                 </ul>
             </div>
-        </div>
+        </section>
     )
 }

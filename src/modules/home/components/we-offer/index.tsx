@@ -29,7 +29,7 @@ export default function Weoffer() {
     ]
 
     return (
-        <div className='sectionSpace'>
+        <section className='sectionSpace'>
             <div className='content-container'>
                 <h2 className='mainHeading'>what We Offer</h2>
                 <p className='mainText'>
@@ -59,6 +59,6 @@ export default function Weoffer() {
                     ))}
                 </ul>
             </div>
-        </div>
+        </section>
     )
 }

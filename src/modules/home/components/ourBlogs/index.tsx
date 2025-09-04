@@ -12,6 +12,8 @@ export default function Blogs() {
             title: "Singapore Gallery Added",
             text: "Cityscape and skyline photos and images of Singapore taken in 2023 have been added to the website.",
             link: "#",
+            icon: "/icons/calendar.svg",
+            date: "May 03, 2024"
         },
         {
             id: 2,
@@ -21,6 +23,8 @@ export default function Blogs() {
             title: "Perth Skyline Photos Add...",
             text: "Cityscape and skyline photos and images of Perth Australia taken in 2023 have been added to the website",
             link: "#",
+            icon: "/icons/calendar.svg",
+            date: "Feb 02, 2024"
         },
         {
             id: 3,
@@ -30,6 +34,9 @@ export default function Blogs() {
             title: "New Photos Of Raleigh",
             text: "New photos of downtown Raleigh, North Carolina taken in 2023 have been added to the Raleigh photo gallery.",
             link: "#",
+            icon: "/icons/calendar.svg",
+            date: "Feb 20, 2024"
+
         },
         {
             id: 4,
@@ -39,11 +46,14 @@ export default function Blogs() {
             title: "New photos of Dallas...",
             text: "New photos of Dallas are now added to the Dallas gallery page. Check out the Dallas gallery for more information on...",
             link: "#",
+            icon: "/icons/calendar.svg",
+            date: "Feb 20, 2024"
+
         },
     ]
 
     return (
-        <div className='sectionSpace'>
+        <section className='sectionSpace'>
             <div className='content-container'>
                 <h2 className='mainHeading'>Our Blogs</h2>
                 <p className='mainText max-w-2xl'>
@@ -63,12 +73,17 @@ export default function Blogs() {
                                 height={item.height}
                                 className=""
                             />
-                            <div className='p-4 pb-7'>
-                                <h5 className='mt-4 mb-2 text-[26px] font-semibold text-[#343636] leading-tight'>
+                            <div className='px-5 py-6'>
+                                <h5 className='mb-2 text-[26px] font-semibold text-[#343636] leading-tight truncate'>
                                     {item.title}
                                 </h5>
+                                <div className='flex items-start mb-2'>
+
+                                    <Image src={item.icon} alt="calendar" width={15} height={15} className='inline mt-0.5 mr-2' />
+                                    <span className='text-[#808080]'>{item.date}</span>
+                                </div>
                                 <p className='text-lg font-normal text-[#808080]'>{item.text}</p>
-                                <Link href={item.link} className="flex gap-2 items-center text-[#73929B] text-base font-semibold mt-4">Read More <Image src="/icons/arrow-right.svg" alt="arrow" width={15} height={15} /></Link></div>
+                                <Link href={item.link} className="flex gap-2 items-center text-[#73929B] text-base font-semibold mt-4 uppercase">Read More <Image src="/icons/arrow-right.svg" alt="arrow" width={15} height={15} /></Link></div>
                         </li>
                     ))}
                 </ul>
@@ -76,6 +91,6 @@ export default function Blogs() {
                     View All Blogs
                 </button>
             </div>
-        </div >
+        </section >
     )
 }

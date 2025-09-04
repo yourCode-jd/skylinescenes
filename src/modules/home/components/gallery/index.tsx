@@ -104,7 +104,7 @@ export default function Gallery() {
     ]
 
     return (
-        <div className='sectionSpace '>
+        <section className='sectionSpace '>
             <div className='content-container'>
                 <h2 className='mainHeading'>Most Popular Image Galleries</h2>
                 <p className='mainText max-w-2xl'>
@@ -136,6 +136,6 @@ export default function Gallery() {
                     show more
                 </button>
             </div>
-        </div>
+        </section>
     )
 }

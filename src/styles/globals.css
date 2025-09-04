@@ -88,7 +88,7 @@
   }
 
   .customBtn {
-    @apply px-8 py-3 bg-[#73929B] text-white text-base font-semibold hover:bg-[#638089] transition-colors duration-200 ease-in w-max flex items-center gap-x-2 uppercase leading-tight;
+    @apply px-8 py-3.5 bg-[#73929B] text-white text-base font-semibold transition-colors duration-200 ease-in w-max flex items-center gap-x-2 uppercase leading-tight hover:bg-[#638089];
   }
 
   .contrast-btn {

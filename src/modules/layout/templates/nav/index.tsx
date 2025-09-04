@@ -12,7 +12,7 @@ export default async function Nav() {
   const regions = await listRegions().then((regions: StoreRegion[]) => regions)
 
   return (
-    <div className="sticky top-0 inset-x-0 z-50 group">
+    <section className="sticky top-0 inset-x-0 z-50 group">
       <div className="h-10 flex justify-center items-center text-white text-base font-medium uppercase bg-[#343636] leading-tight">
         <p>Summer is here!  Sale!! use code spring15 for 15% off canvas and prints</p>
       </div>
@@ -73,6 +73,6 @@ export default async function Nav() {
           </div>
         </nav>
       </header>
-    </div >
+    </section >
   )
 }
