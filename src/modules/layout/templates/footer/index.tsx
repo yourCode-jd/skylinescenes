@@ -49,11 +49,11 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#343636] text-gray-300">
-      <div className="content-container py-20">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+      <div className="content-container py-10 md:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-6 xl:grid-cols-12 gap-8">
 
           <div className="md:col-span-8">
-            <h4 className="text-white font-semibold text-[26px] mb-7">Top Categories</h4>
+            <h4 className="text-white font-semibold text-[22px] md:text-[26px] mb-4 md:mb-7">Top Categories</h4>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
               {topCategories.map((item, index) => (
                 <Link
@@ -69,7 +69,7 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-2">
-            <h4 className="text-white font-semibold text-[26px] mb-7">Quick Links</h4>
+            <h4 className="text-white font-semibold text-[22px] md:text-[26px] mb-4 md:mb-7">Quick Links</h4>
             <ul className="space-y-4">
               {quickLinks.map((item, index) => (
                 <li key={index}>
@@ -80,7 +80,7 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-2">
-            <h4 className="text-white font-semibold text-[26px] mb-7">Other Links</h4>
+            <h4 className="text-white font-semibold text-[22px] md:text-[26px] mb-4 md:mb-7">Other Links</h4>
             <ul className="space-y-4">
               {otherLinks.map((item, index) => (
                 <li key={index}>
@@ -95,8 +95,8 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-[#494C4C] py-4">
-        <div className="content-container flex flex-col md:flex-row items-center justify-between">
-          <p className="text-base font-normal text-[#B1B7C7] leading-tight">&copy; {new Date().getFullYear()} Skyline Scenes. All Rights Reserved.</p>
+        <div className="content-container gap-4 flex flex-col md:flex-row items-center justify-between">
+          <p className="text-base font-normal text-[#B1B7C7] leading-tight text-center">&copy; {new Date().getFullYear()} Skyline Scenes. All Rights Reserved.</p>
           <div className="flex space-x-4 items-center">
             {socialLinks.map((item, index) => (
               <Link key={index} href={item.href} aria-label={item.name}>

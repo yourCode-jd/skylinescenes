@@ -20,11 +20,11 @@ export default function About() {
 
     return (
         <section className="sectionSpace bg-[#EDF1F3]">
-            <div className="max-w-[1330px] mx-auto">
+            <div className="max-w-[1330px] mx-auto px-6">
                 {aboutContent.map((item) => (
                     <div
                         key={item.id}
-                        className="grid grid-cols-1 md:grid-cols-2 items-center gap-24 mt-[10px] mb-[90px]"
+                        className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 md:gap-12 lg:gap-24 mt-[10px] mb-0 md:mb-[50px] lg:mb-[90px]"
                     >
                         {/* Left Side - Image */}
                         <div>
@@ -39,11 +39,11 @@ export default function About() {
 
                         {/* Right Side - Content */}
                         <div>
-                            <h3 className="leading-tight text-[40px] font-semibold text-[#343636] mb-5">
+                            <h3 className="leading-tight text-[26px] md:text-[40px] font-semibold text-[#343636] mb-5">
                                 {item.title}
                             </h3>
                             {item.para.map((text, idx) => (
-                                <p key={idx} className="text-lg font-normal text-[#808080] mb-7">
+                                <p key={idx} className="text-base md:text-lg font-normal text-[#808080] mb-7">
                                     {text}
                                 </p>
                             ))}

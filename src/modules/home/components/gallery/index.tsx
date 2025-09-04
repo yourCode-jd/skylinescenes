@@ -111,7 +111,7 @@ export default function Gallery() {
                     Explore Skyline Scenes' most popular image galleries for breathtaking aerial photography, perfect for enhancing any space with stunning views.
                 </p>
 
-                <ul className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10 my-[90px]'>
+                <ul className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-10 my-[30px] md:my-[50px] lg:my-[90px]'>
                     {galleryData.map((item) => (
                         <li
                             key={item.id}
@@ -122,10 +122,10 @@ export default function Gallery() {
                                 alt={item.title}
                                 width={item.width}
                                 height={item.height}
-                                className=""
+                                className="w-full object-cover"
                             />
-                            <Link href={item.link} className='mt-5 block text-center'>
-                                <h3 className='leading-tight text-lg font-medium text-[#343636]'>
+                            <Link href={item.link} className='mt-3 md:mt-5 block text-center'>
+                                <h3 className='leading-tight text-base md:text-lg font-medium text-[#343636]'>
                                     {item.title}
                                 </h3>
                             </Link>

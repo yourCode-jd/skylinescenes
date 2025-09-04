@@ -52,6 +52,8 @@ export default function Hero() {
               className="h-full w-full bg-cover bg-center relative"
               style={{ backgroundImage: `url(${slide.image})` }}
             >
+              {/* Dark overlay */}
+              <div className="sm:hidden absolute inset-0 bg-black/30"></div>
               <div className="content-container h-full z-10 mr-auto relative">
                 <div className="max-w-xl flex flex-col justify-center items-start text-left gap-2 h-full">
                   <Heading level="h1" className="text-[26px] md:text-[50px] text-white font-semibold leading-tight capitalize" > {slide.title} </Heading> <Heading level="h2" className="text-sm md:text-base text-[#E4E4E4] font-medium leading-snug max-w-md" > {slide.subtitle} </Heading> <Link href={slide.link} target="_blank" className="mt-8"> <Button variant="secondary" className="flex items-center text-white text-sm sm:text-base uppercase font-semibold bg-[#343636] px-6 sm:px-8 py-3 hover:bg-[#4c4e4e] outline-none border-none rounded-none" > More info on prints </Button> </Link>
@@ -61,7 +63,7 @@ export default function Hero() {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="custom-pagination absolute z-[60] flex justify-center items-center gap-3 "></div>
+      <div className="custom-pagination absolute z-40 flex justify-center items-center gap-3 "></div>
     </section>
 
   );

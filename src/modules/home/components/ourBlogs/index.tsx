@@ -60,7 +60,7 @@ export default function Blogs() {
                     Explore Skyline Scenes' most popular image galleries for breathtaking aerial photography, perfect for enhancing any space with stunning views.
                 </p>
 
-                <ul className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 my-[90px]'>
+                <ul className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 my-[30px]  md:my-[50px] lg:my-[90px]'>
                     {blogData.map((item) => (
                         <li
                             key={item.id}
@@ -71,10 +71,10 @@ export default function Blogs() {
                                 alt={item.title}
                                 width={item.width}
                                 height={item.height}
-                                className=""
+                                className="w-full object-cover"
                             />
                             <div className='px-5 py-6'>
-                                <h5 className='mb-2 text-[26px] font-semibold text-[#343636] leading-tight truncate'>
+                                <h5 className='mb-2 text-[22px] md:text-[26px] font-semibold text-[#343636] leading-tight truncate'>
                                     {item.title}
                                 </h5>
                                 <div className='flex items-start mb-2'>
@@ -82,8 +82,8 @@ export default function Blogs() {
                                     <Image src={item.icon} alt="calendar" width={15} height={15} className='inline mt-0.5 mr-2' />
                                     <span className='text-[#808080]'>{item.date}</span>
                                 </div>
-                                <p className='text-lg font-normal text-[#808080]'>{item.text}</p>
-                                <Link href={item.link} className="flex gap-2 items-center text-[#73929B] text-base font-semibold mt-4 uppercase">Read More <Image src="/icons/arrow-right.svg" alt="arrow" width={15} height={15} /></Link></div>
+                                <p className='text-base md:text-lg font-normal text-[#808080]'>{item.text}</p>
+                                <Link href={item.link} className="flex gap-2 items-center text-[#73929B] text-sm md:text-base font-semibold mt-4 uppercase">Read More <Image src="/icons/arrow-right.svg" alt="arrow" width={15} height={15} /></Link></div>
                         </li>
                     ))}
                 </ul>

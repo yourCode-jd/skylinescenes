@@ -36,20 +36,20 @@ export default function Weoffer() {
                     Whether you need photography services, bulk orders, or something custom, we’ve got you covered.
                 </p>
 
-                <ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-[90px]'>
+                <ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-[30px]  md:mt-[50px] lg:mt-[90px]'>
                     {offers.map((item) => (
                         <li key={item.id}>
                             <div>
                                 <Image src={item.image} alt={item.title} width={500} height={340} />
-                                <h3 className='leading-tight mt-7 mb-1 text-[26px] font-semibold text-[#343636]'>
+                                <h3 className='leading-tight mt-4 md:mt-7 mb-1 text-[22px] md:text-[26px] font-semibold text-[#343636]'>
                                     {item.title}
                                 </h3>
-                                <p className='mb-2.5 text-lg font-normal text-[#808080]'>
+                                <p className='mb-2.5 text-base md:text-lg font-normal text-[#808080]'>
                                     {item.description}
                                 </p>
                                 <Link
                                     href={item.link}
-                                    className='text-[#73929B] font-semibold text-lg uppercase flex items-center gap-x-2'
+                                    className='text-[#73929B] font-semibold text-sm md:text-lg uppercase flex items-center gap-x-2'
                                 >
                                     learn more{" "}
                                     <Image src="/icons/arrow-right.svg" alt="arrow-right" width={15} height={15} />

@@ -61,7 +61,7 @@ export default function CanvasDisplay() {
                     Explore stock photography, aerial shots, fine art prints, and custom canvas displays—all with free shipping.
                 </p>
 
-                <ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[650px_1fr_1fr] gap-10 mt-[90px]'>
+                <ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-[450px_1fr_1fr] 2xl:grid-cols-[650px_1fr_1fr] gap-6 xl:gap-10 mt-[30px] md:mt-[50px] lg:mt-[90px]'>
                     {canvasData.map((item) => (
                         <li
                             key={item.id}
@@ -74,14 +74,14 @@ export default function CanvasDisplay() {
                                 height={item.height}
                                 className={`${item.large ? "" : "h-full object-cover"}`}
                             />
-                            <div className='absolute top-7 left-7'>
-                                <h3 className='leading-tight mb-1 text-[26px] font-semibold text-white'>
+                            <div className='absolute top-5 md:top-7 left-5 md:left-7'>
+                                <h3 className='leading-tight mb-1 text-[22px] md:text-[26px] font-semibold text-white'>
                                     {item.title}
                                 </h3>
-                                <p className='mb-2.5 text-lg font-normal text-white'>{item.subtitle}</p>
+                                <p className='mb-2.5 text-base md:text-lg font-normal text-white'>{item.subtitle}</p>
                                 <Link
                                     href={item.link}
-                                    className='text-white font-semibold text-base uppercase flex items-center gap-x-2'
+                                    className='text-white font-semibold text-sm md:text-base uppercase flex items-center gap-x-2'
                                 >
                                     more info{" "}
                                     <Image

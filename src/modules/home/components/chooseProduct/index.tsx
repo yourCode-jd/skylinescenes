@@ -62,7 +62,7 @@ export default function ChooseProduct() {
                     From digital stock to fine art prints, canvas, metal, and acrylic—select the format that best brings your images to life.
                 </p>
 
-                <ul className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10 my-[90px]'>
+                <ul className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10 my-[30px]  md:my-[50px] lg:my-[90px]'>
                     {chooseProduct.map((item) => (
                         <li
                             key={item.id}
@@ -73,7 +73,7 @@ export default function ChooseProduct() {
                                 alt={item.title}
                                 width={item.width}
                                 height={item.height}
-                                className=""
+                                className="mx-auto"
                             />
                             <Link href={item.link} className='mt-5 block text-center'>
                                 <h3 className='leading-tight text-lg font-medium text-[#343636]'>

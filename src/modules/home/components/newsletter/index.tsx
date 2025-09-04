@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function Newsletter() {
     return (
-        <section className='py-14 bg-[#EDF1F3]'>
+        <section className='py-10 md:py-14 bg-[#EDF1F3]'>
             <div className='content-container'>
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-8 items-center'>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 items-center'>
 
                     {/* Left Side - Heading */}
                     <div>
@@ -15,7 +15,7 @@ export default function Newsletter() {
                     </div>
 
                     {/* Right Side - Form */}
-                    <form className="flex gap-4 flex-col sm:flex-row w-full max-w-2xl">
+                    <form className="flex gap-4 sm:gap-0 flex-col sm:flex-row w-full max-w-2xl">
                         <input
                             type="email"
                             placeholder="Enter your email"
@@ -24,7 +24,7 @@ export default function Newsletter() {
                         />
                         <button
                             type="submit"
-                            className="customBtn font-bold min-w-full sm:min-w-[166px]"
+                            className="customBtn font-bold min-w-full sm:min-w-[100px] lg:min-w-[166px]"
                         >
                             Subscribe
                         </button>

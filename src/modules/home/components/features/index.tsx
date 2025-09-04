@@ -59,7 +59,7 @@ export default function Features() {
                     Explore Skyline Scenes' most popular image galleries for breathtaking aerial photography, perfect for enhancing any space with stunning views.
                 </p>
 
-                <ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 my-[90px]'>
+                <ul className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 md:gap-10 my-[30px]  md:my-[50px] lg:my-[90px]'>
                     {featureData.map((item) => (
                         <li
                             key={item.id}
@@ -70,7 +70,7 @@ export default function Features() {
                                 alt={item.title}
                                 width={item.width}
                                 height={item.height}
-                                className=""
+                                className="w-full object-cover"
                             />
                             <h5 className='mt-4 mb-2 text-lg font-normal text-[#666666] leading-tight px-4'>
                                 {item.title}
