@@ -88,11 +88,11 @@
   }
 
   .customBtn {
-    @apply px-8 py-3.5 bg-[#73929B] text-white text-base font-semibold transition-colors duration-200 ease-in w-max flex items-center gap-x-2 uppercase leading-tight hover:bg-[#638089];
+    @apply px-8 py-3.5 bg-[#73929B] text-white text-sm md:text-base font-semibold transition-colors duration-200 ease-in w-max flex justify-center items-center gap-x-2 uppercase leading-tight hover:bg-[#638089];
   }
 
   .contrast-btn {
-    @apply px-4 py-2 border border-black rounded-full hover: bg-black hover:text-white transition-colors duration-200 ease-in;
+    @apply px-4 py-2 border border-black rounded-full hover:bg-black hover:text-white transition-colors duration-200 ease-in;
   }
 
   .text-xsmall-regular {

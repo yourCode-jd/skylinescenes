@@ -15,7 +15,7 @@ export default function Newsletter() {
                     </div>
 
                     {/* Right Side - Form */}
-                    <form className="flex w-full max-w-2xl">
+                    <form className="flex gap-4 flex-col sm:flex-row w-full max-w-2xl">
                         <input
                             type="email"
                             placeholder="Enter your email"
@@ -24,7 +24,7 @@ export default function Newsletter() {
                         />
                         <button
                             type="submit"
-                            className="customBtn font-bold min-w-[166px]"
+                            className="customBtn font-bold min-w-full sm:min-w-[166px]"
                         >
                             Subscribe
                         </button>

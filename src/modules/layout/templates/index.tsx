@@ -1,7 +1,7 @@
 import React from "react"
 
 import Nav from "@modules/layout/templates/nav"
-import Newsletter from "@modules/layout/templates/newsletter"
+import Newsletter from "@modules/home/components/newsletter"
 import Footer from "@modules/layout/templates/footer"
 
 const Layout: React.FC<{
